@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+}
+
+.Page1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.Profile-top div.profile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    div.body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    div.sidebar {
+       display: none;
+    }
+
+    .Profile-top {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Profile-top div.profile {
+        display: contents;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.act-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 50px 30px;
+    }
+
+    body div.act-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Activity {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,10 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: fit-content;
+    background: #fd9d9dcc;
+    border-radius: 25px;
+    margin: 70px 20px 70px 100px;
+}
+

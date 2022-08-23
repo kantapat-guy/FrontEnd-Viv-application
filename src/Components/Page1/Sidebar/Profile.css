@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+}
+
+.con-profile  {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+
+.profileName {
+   font-family: 'Varela Round', sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 30px;
+   padding: 10px 0px;
+}
+
+.up-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload {
+    background-color: transparent;
+    border: 0px;
+    padding: 6px;
+}
+.check {
+    width: 20px;
+    cursor: pointer;
+    opacity: 60%;
+}

@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+}
+
+.AddAct {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddAct h1 {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #572e2ec0;
+}
+
+.AddAct button{
+
+    display: flex;    
+    width: 250px;
+    justify-content: center;
+    border: 0;
+    background: #b9f2ffb6;
+    width: 150px;
+    align-items: center;
+    height: 60px;
+    border-radius: 15px;
+    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
+    background-color: #98b7acc7;
+    font-size: 20px;
+    border: none;
+    color: #2c4135bb;
+}
+
+.AddAct button:hover {
+    background: #b5ead7;
+}
+

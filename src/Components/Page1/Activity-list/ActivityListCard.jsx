@@ -211,7 +211,7 @@ const ActivityListCard = () => {
                                 <img src= {pic(act)} alt="" />
                                     <div className="span-can">
                                         <div className="div-text"><p id="text-name">Activity type : </p><span id="span-text">{act.ActType}</span></div>
-                                        <div className="div-text"><p id="text-name">Duration : </p><span id="span-text">{act.hour} hour || {act.minute} minutes</span></div>
+                                        <div className="div-text"><p id="text-name">Duration : </p><span id="span-text">{act.hour} hour  {act.minute} minutes</span></div>
                                         <div className="div-text"><p id="text-name">Date : </p><span id="span-text">{new Date(act.date).toLocaleDateString()}</span></div>
                                         <p id="text-name">Description : </p><div className="des-con"><p className="text-des">{act.description}</p></div>
                                     </div>

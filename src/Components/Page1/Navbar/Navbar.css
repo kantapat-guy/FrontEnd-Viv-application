@@ -1,11 +1,10 @@
 .Navbar-container {
-    height: 200px;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 25px;
-    padding: 25px 40px 0px 40px;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
     background-color: #2E6BB9;
     /* background-image: url("./image/beautiful-panoramic-mountain-mist-blue-sky-background-north-thailand-inthanon-national-park-chiang-mai-province-panorama-landscape-thailand.jpg");
     background-repeat: no-repeat;
@@ -24,6 +23,7 @@ a {
 #logoIcon {
     width: 35px;
     height: 35px;
+    margin-right: 20px;
 }
 
 #text-viv {

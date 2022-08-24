@@ -42,13 +42,9 @@ const Profile =() => {
     })
   }
 
-  useEffect(() => {
-    fetchData()
-    fetchImg()
-  }, [])
 
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const imageRef = ref(storage, "image");
     uploadBytes(imageRef, image)
       .then(() => {
@@ -58,7 +54,7 @@ const Profile =() => {
             axios.post(`${import.meta.env.VITE_API_URL}/users/profile`, {url}, {headers: {authorization: `Bearer ${getToken()}`}})
             fetchImg()
           })
-          .then(() => fetchImg())
+          .then (() => fetchImg())
           .catch((error) => {
             console.log(error.message, "error getting the image url");
           });
@@ -68,6 +64,12 @@ const Profile =() => {
         console.log(error.message);
       });
   };
+
+  useEffect(() => {
+    fetchData()
+    fetchImg()
+  }, [])
+
 
   return (
     <div className="con-profile">

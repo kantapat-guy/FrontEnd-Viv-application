@@ -4,25 +4,28 @@
     box-sizing: border-box;
 }
 
-.summary-card{
-    background-color: #FD9D9D;
-    width: 450px;
-    height: auto;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.summary-card {
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 120px 120px 120px;
+    grid-template-columns: 250px 250px 260px;
+    gap: 20px;
 }
 
+.m-text {
+    font-size: 26px;
+    margin-top: 20px;
+}
 
 .summary-card .card{
     margin: 20px 0;
-    width: 380px;
+    width: fit-content;
     height: 120px;
     background-color: #F1F1F1;
     border-radius: 20px;
-    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
@@ -47,8 +50,12 @@
 }
 
 .pieChart {
-    height: 400px;
+    height: 450px;
     width: 100%;
     margin: 30px;
 }
 
+.span-time {
+    margin-left: 20px;
+    text-align: center;
+}

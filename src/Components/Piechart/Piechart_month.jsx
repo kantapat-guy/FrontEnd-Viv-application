@@ -171,13 +171,13 @@ export default function PieChartMonth() {
         </PieChart>
         </ResponsiveContainer>
       </div>
+      <h3 className="m-text">{`Month : 8`}</h3>
       <div className="summary-card">
                 {summary.map((data, index) => (
                     <div className="card" key={index}>
                         <div className="card-content" key={index}>
-                                <h3>{`Month : ${data.month}`}</h3>
                                 <p>{`Type of actvity : ${data.type}`}</p>
-                                <p>{`Total time hour : ${cal(data.total)}`}</p>
+                                <p>{`Total time hour : `}</p><span className="span-time">{cal(data.total)}</span>
                         </div>
                     </div>
                   ))}

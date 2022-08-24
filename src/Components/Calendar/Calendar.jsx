@@ -115,7 +115,7 @@ const MyCalendar = () => {
   
 
   return (
-    <div>
+    <div className='calendar-con'>
         <div style={{ display:"flex", justifyContent: "center", alignItems: "center", flexDirection:"column" }}>
           <div className='header-schedule'>
             <h1 className='calendar-title' style={{ textAlign:"center" }}>SCHEDULE</h1>

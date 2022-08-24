@@ -1,7 +1,6 @@
 import "./Navbar.css";
 
 import vivLogo from  '../Navbar/image/logoIcon.svg';
-import schedule from "../Navbar/image/scheduleIcon.svg";
 import summary from '../Sidebar/images/summaryicon.png';
 import tip from '../../../assets/tip-topic.png'
 import { NavLink } from "react-router-dom";

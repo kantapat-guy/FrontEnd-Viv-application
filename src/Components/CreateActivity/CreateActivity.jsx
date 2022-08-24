@@ -56,7 +56,7 @@ const CreateAct = () => {
     <div className="bigBox">
       <form id="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="type">
-          <h2>Type activity : </h2>
+          <h2>Type activity</h2>
           <select {...register("ActType", { required: true })}>
             <option value="">---- Select your activity ----</option>
             <option value="Running">Running  🏃</option>
@@ -69,24 +69,24 @@ const CreateAct = () => {
         </div>
 
         <div className="type">
-          <h2>Duration : </h2>
+          <h2>Duration</h2>
           <div className="boxDu">
-            <input type="number" min="0" max="24"{...register("hour", { required: true})} />
+            <input className="num" type="number" min="0" max="24"{...register("hour", { required: true})} />
             <h3>Hours</h3>
-            <input type="number" min="0" max="59"{...register("minute", { required: true })} />
+            <input className="num" id="mins" type="number" min="0" max="59"{...register("minute", { required: true })} />
             <h3>Minutes</h3>
           </div>
           {errors.hour && <p>Hour is required</p>}
           {errors.minute && <p>Minutes is required</p>}
         </div>
         <div className="cal">
-          <h2>Date : </h2>
-          <input type="date" {...register("date", { required: true})} />
+          <h2>Date</h2>
+          <input className="inDate" type="date" {...register("date", { required: true})} />
             {errors.date && <p>Date is required</p>}
         </div>
 
         <div className="typeD">
-          <h2>Description </h2>
+          <h2>Description</h2>
           <textarea {...register("description")} placeholder="Description" />
         </div>
 

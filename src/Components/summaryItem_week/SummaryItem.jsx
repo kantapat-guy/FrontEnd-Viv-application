@@ -1,5 +1,4 @@
 import React from 'react';
-import './SummaryItem.css'
 
 
 const SummaryItemWeek =() => {

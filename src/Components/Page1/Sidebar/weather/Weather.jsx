@@ -6,6 +6,7 @@ import wind from "./image/wind.png"
 import temp from "./image/celsius.png"
 import rain from "./image/drops.png"
 import hum from "./image/humidity.png"
+import moment from "moment";
 
 const Weather = () => {
 
@@ -51,12 +52,11 @@ const Weather = () => {
         fecthAPI()
     },[])
 
-
     return (
         <>
             <div className='weather-container'>
                 <div className='weather-head'>
-                    <h3>Today is ....</h3>
+                <h3 className='today'>Today : {moment().format("DD-MM-YYYY")}</h3>
                 </div>
                 <div className='weather-content'>
                     <div className='weather-result'>

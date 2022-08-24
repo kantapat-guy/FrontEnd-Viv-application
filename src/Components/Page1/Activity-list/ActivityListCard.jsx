@@ -36,7 +36,7 @@ const ActivityListCard = () => {
   const fetchData = () => {
     setLoading(true)
     axios
-    .get(`http://localhost:8080/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`${import.meta.env.VITE_API_URL}/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       setActivity(res.data)
     })
@@ -75,14 +75,13 @@ const ActivityListCard = () => {
 
   const [select, setSelect] = useState("");
 
-  console.log(select)
+
   const onSelect = async() => {
-    console.log(select)
     if(select.value === "New") {
       setLoading(true)
       setTimeout(() => {
         axios
-        .get(`http://localhost:8080/users/me/activities/`, {headers: {authorization: `Bearer ${getToken()}`}})
+        .get(`${import.meta.env.VITE_API_URL}/users/me/activities/`, {headers: {authorization: `Bearer ${getToken()}`}})
         .then((res) => {
           setActivity(res.data)
         })
@@ -95,7 +94,7 @@ const ActivityListCard = () => {
       setLoading(true)
       setTimeout(() => {
       axios
-      .get(`http://localhost:8080/users/me/activities/asc`, {headers: {authorization: `Bearer ${getToken()}`}})
+      .get(`${import.meta.env.VITE_API_URL}/users/me/activities/asc`, {headers: {authorization: `Bearer ${getToken()}`}})
       .then((res) => {
         setActivity(res.data)
       })

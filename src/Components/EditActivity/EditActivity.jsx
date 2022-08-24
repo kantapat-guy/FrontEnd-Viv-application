@@ -100,11 +100,11 @@ const EditAct = () => {
 
   return (
 <div>
-    <div className="bigBox2">
-      <form id="form2" onSubmit={handleSubmit(onSubmit)}>
-        <div className="type2">
-          <h2>Type activity : </h2>
-          <select {...register("ActType", { required: true }) }>
+    <div className="bigBox">
+      <form id="form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="type">
+          <h2>Type activity</h2>
+          <select {...register("ActType", { required: true })}>
             <option value="">---- Select your activity ----</option>
             <option value="Running">Running  🏃</option>
             <option value="Swimming">Swimming  🏊🏻‍♂️</option>
@@ -115,32 +115,35 @@ const EditAct = () => {
           {errors.ActType && <p>Type is required</p>}
         </div>
 
-        <div className="type2">
-          <h2>Duration : </h2>
-          <div className="boxDu2">
-            <input type="number" min="0" max="24"{...register("hour", { required: true })} />
-            {errors.hour && <p>Hour is required</p>}
+        <div className="type">
+          <h2>Duration</h2>
+          <div className="boxDu">
+            <input className="num" type="number" min="0" max="24"{...register("hour", { required: true})} />
             <h3>Hours</h3>
-            <input type="number" min="0" max="59"{...register("minute", { required: true })} />
-            {errors.minute && <p>Minutes is required</p>}
+            <input className="num" id="mins" type="number" min="0" max="59"{...register("minute", { required: true })} />
             <h3>Minutes</h3>
           </div>
+          {errors.hour && <p>Hour is required</p>}
+          {errors.minute && <p>Minutes is required</p>}
         </div>
-
-        <div className="calendar2">
-          <h2>Date : </h2>
-          <input type="date" {...register("date", { required: true})} />
+        <div className="cal">
+          <h2>Date</h2>
+          <input className="inDate" type="date" {...register("date", { required: true})} />
             {errors.date && <p>Date is required</p>}
         </div>
 
-        <div className="type3">
+        <div className="typeD">
           <h2>Description</h2>
-          <textarea {...register("description")}  />
+          <textarea {...register("description")} placeholder="Description" />
         </div>
 
-        <div className="btn2">
-        <input type="submit" value="Save" />
-        <Link to="/" ><input type="submit" value="Cancel" /></Link>
+        <div className="btn">
+          <button style={{border: "0px", cursor: "pointer"}}>
+              <input type="submit" value="Add" style={{cursor: "pointer"}}/>
+          </button>
+          <Link to="/">
+              <input type="submit" value="Cancel" style={{cursor: "pointer"}}/>
+          </Link>
         </div>
       </form>
     </div>

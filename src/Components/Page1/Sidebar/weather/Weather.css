@@ -15,10 +15,17 @@
     justify-content: center;
 }
 
+
 .weather-head {
     display: flex;
     align-items: center;
     padding: 10px 0px;
+    justify-content: center;
+}
+
+.today {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .weather-result {

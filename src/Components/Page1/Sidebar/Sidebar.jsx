@@ -9,6 +9,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <Profile />
       <Weather />
+      <Tips />
     </div>
   );
 };

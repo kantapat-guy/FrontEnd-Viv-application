@@ -10,16 +10,15 @@
 }
 
 .AddAct h1 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     text-align: center;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
     color: #572e2ec0;
 }
 
 .AddAct button{
-
     display: flex;    
     width: 250px;
     justify-content: center;
@@ -31,13 +30,13 @@
     border-radius: 15px;
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
     cursor: pointer;
-    background-color: #98b7acc7;
+    background-color: #1ca1f1;
     font-size: 20px;
     border: none;
     color: #2c4135bb;
 }
 
 .AddAct button:hover {
-    background: #b5ead7;
+    background: #1c9ff166;
 }
 

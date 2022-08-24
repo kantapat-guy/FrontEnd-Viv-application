@@ -3,15 +3,16 @@
     flex-direction: column;
     width: 420px;
     height: fit-content;
-    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
+    border-top: 2px dashed rgba(122, 122, 122, 0.426);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
     background: #F1F1F1;
-    border-radius: 25px;
-    margin: 15px 40px;
-    padding: 20px;
+    border-radius: 25px; */
+    padding: 15px;
 }
 
 .weather-content {
     display: flex;
+    justify-content: center;
 }
 
 .weather-head {
@@ -22,7 +23,6 @@
 
 .weather-result {
     padding: 10px;
-    width: 50%;
 }
 
 .env-data {
@@ -32,7 +32,6 @@
 }
 
 .detail-result {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;

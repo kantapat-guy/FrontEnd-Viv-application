@@ -7,11 +7,11 @@
 
 .listCard{
     background-color: #F1F1F1;
-    width: 600px;
+    width: 700px;
     height: fit-content;
     border-radius: 25px;
-    margin-bottom: 20px;
-    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
+    margin: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card{
@@ -39,9 +39,9 @@
 }
 
 .container-content p {
-    font-size: 18px;
+    font-size: 1.4rem;
     color:  #572e2ec0;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
 }
 
@@ -66,11 +66,11 @@
 
 /*  Pagination */
 .pagegination{
-    width: 100%;
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
 }
 
 .activePage {
@@ -88,4 +88,37 @@
     border-radius: 50%;
     background-color: antiquewhite;
     transition: 0.4s;
+}
+
+
+#text-name {
+    font-weight: 700;
+    display: inline;
+}
+
+.span-can .div-text {
+    margin: 10px 0px;
+}
+
+#span-text {
+    font-size: 1.3rem;
+}
+
+.span-can .des-con {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #eaeaea;
+    max-width: 600px;
+}
+
+
+.text-des {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: block;
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

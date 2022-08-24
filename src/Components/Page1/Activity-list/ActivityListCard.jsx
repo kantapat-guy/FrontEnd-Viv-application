@@ -15,6 +15,8 @@ import { getToken } from "../../Login/services/auth";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import * as loadingData from "./images/loading.json";
+import Select from 'react-select';
+
 
 const ActivityListCard = () => {
 
@@ -27,19 +29,21 @@ const ActivityListCard = () => {
     const [activity, setActivity] = useState([]);
 
   //For Loading animate
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
 
   //Fetch data from database to show at card
   const fetchData = () => {
+    setLoading(true)
     axios
-    .get(`${import.meta.env.VITE_API_URL}/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`http://localhost:8080/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       setActivity(res.data)
     })
     .catch((err) => {
       alert(err)
     })
+    .finally(() => setLoading(false))
   }
 
   const defaultOptions = {
@@ -52,14 +56,66 @@ const ActivityListCard = () => {
   };
 
   useEffect(() => {
-
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       fetchData()
-      setLoading(true)
-      }, 1000);
+      setLoading(false)
+    }, 1000)
 
-    return () => clearTimeout(timer);
   }, [])
+
+  
+  // const options = [
+  //   "Newest to oldest", "Oldest to newest"
+  // ]
+
+  const options = [
+    { value: 'New', label: 'Newest to oldest' },
+    { value: 'Old', label: 'Oldest to newest' }
+  ];
+
+  const [select, setSelect] = useState("");
+
+  console.log(select)
+  const onSelect = async() => {
+    console.log(select)
+    if(select.value === "New") {
+      setLoading(true)
+      setTimeout(() => {
+        axios
+        .get(`http://localhost:8080/users/me/activities/`, {headers: {authorization: `Bearer ${getToken()}`}})
+        .then((res) => {
+          setActivity(res.data)
+        })
+        .then (()=> setLoading(false))
+        .catch((err) => {
+          alert(err)})
+    }, 500);
+  }
+    else if (select.value === "Old") {
+      setLoading(true)
+      setTimeout(() => {
+      axios
+      .get(`http://localhost:8080/users/me/activities/asc`, {headers: {authorization: `Bearer ${getToken()}`}})
+      .then((res) => {
+        setActivity(res.data)
+      })
+      .then (()=> setLoading(false))
+      .catch((err) => {
+        alert(err)
+      })
+    }, 500);
+    }
+    else {
+      setLoading(true)
+      fetchData()
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    onSelect()
+  }, [select])
+
 
 
   useEffect(() => {
@@ -135,26 +191,30 @@ const ActivityListCard = () => {
         .catch(err=>console.log(err))
     }
 
-
+  
   return (
     <div className="container">
         <div className="scroll">
+        {/* <Dropdown options={options} placeholder="Select an option" onChange={onSelect}/> */}
+        <Select
+        defaultValue={select}
+        onChange={setSelect}
+        options={options}
+        />
+        {loading ? (
+            <div style={{width:"700px"}}><Lottie options={defaultOptions} height={150} width={150} /></div> ) : 
         <div className="container-listcard">
-        <div style={{ display: "flex" }}>
-        {!loading ? (
-            <Lottie options={defaultOptions} isStopped={loading} height={140} width={140} /> ) : null }
-          </div>
           <FadeIn>
             {currentItems.map((act,index) => (
                     <div className="listCard" key={index} >
                         <div className="card" key={index} >
                             <div className="container-content" key={index} >
                                 <img src= {pic(act)} alt="" />
-                                    <div>
-                                        <p>Activity type : {act.ActType}</p>
-                                        <p>Duration : {act.hour} hour || {act.minute} minutes</p>
-                                        <p>Date : {new Date(act.date).toLocaleDateString()}</p>
-                                        <p>Description : {act.description}</p>
+                                    <div className="span-can">
+                                        <div className="div-text"><p id="text-name">Activity type : </p><span id="span-text">{act.ActType}</span></div>
+                                        <div className="div-text"><p id="text-name">Duration : </p><span id="span-text">{act.hour} hour || {act.minute} minutes</span></div>
+                                        <div className="div-text"><p id="text-name">Date : </p><span id="span-text">{new Date(act.date).toLocaleDateString()}</span></div>
+                                        <p id="text-name">Description : </p><div className="des-con"><p className="text-des">{act.description}</p></div>
                                     </div>
                             </div>
                             <div className="card-btn">
@@ -166,6 +226,7 @@ const ActivityListCard = () => {
                     ))}
           </FadeIn>
         </div> 
+      }
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
@@ -180,8 +241,8 @@ const ActivityListCard = () => {
         activeClassName="activePage"
       />
       </div>
-    </div>
-  );
+    </div> 
+  )
 }
 
 export default ActivityListCard

@@ -2,22 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .act-container {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 100%;
     height: fit-content;
-    background: #fd9d9dcc;
+    justify-content: center;
     border-radius: 25px;
-    margin: 70px 100px 0px 20px;
-    padding: 30px;
+    background-color: #f7f4fa;
 }
 
 .act-container h3 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -26,16 +25,19 @@
 }
 
 .head-content{
-    padding-bottom: 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    top: 0%;
+    background-color: #f7f4fa;
 }
 
 
 .head-content .actList {
     font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     color:  #572e2ec0;
 }
@@ -59,7 +61,7 @@
         flex-direction: column;
         width: fit-content;
         height: fit-content;
-        background: #fd9d9dcc;
+        background: #f7f4fa;
         border-radius: 25px;
         margin: 70px 0;
     }

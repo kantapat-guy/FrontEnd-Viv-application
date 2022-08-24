@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
 }
 
@@ -20,7 +20,7 @@
     width: 200px;
     height: 40px;
     border-radius: 5px;
-    background-color: #98b7acc7;
+    background-color: #bce7ffc7;
     font-size: 18px;
     font-weight: 600;
     border: none;
@@ -75,8 +75,8 @@
   .popup-content {
     width: auto;
     height: auto;
-    max-width: 650px;
-    max-height: 400px;
+    width: 650px;
+    height: fit-content;
     border-radius: 0.5rem;
     animation: anvil 0.5s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   }
@@ -131,6 +131,15 @@
     padding: 10px;
 }
 
+.rbc-event.rbc-selected {
+  background-color:rgb(107, 181, 255);
+}
+
+.rbc-event {
+  background-color:rgb(173, 214, 255);
+  height: fit-content;
+}
+
 .input-time {
     border-radius: 5px;
     border-color: rgba(209,213,219);
@@ -144,7 +153,7 @@
     width: 20%;
     padding: 10px;
     border-radius: .25rem;
-    background-color: #98b7acc7;
+    background-color: #bce7ffc7;
     border: transparent;
     color: #572e2ec0;
     font-weight: 600;

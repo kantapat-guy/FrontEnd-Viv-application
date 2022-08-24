@@ -1,10 +1,15 @@
 .Navbar-container {
-    background: #FFE7E7;
-    height: 50px;
+    height: 200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 25px;
+    padding: 25px 40px 0px 40px;
+    background-color: #2E6BB9;
+    /* background-image: url("./image/beautiful-panoramic-mountain-mist-blue-sky-background-north-thailand-inthanon-national-park-chiang-mai-province-panorama-landscape-thailand.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
 }
 
 .logo {
@@ -19,21 +24,19 @@ a {
 #logoIcon {
     width: 35px;
     height: 35px;
-    margin: 0 20px;
 }
 
 #text-viv {
     width: auto;
     height: auto;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
-    text-shadow: 2px 2px #eda3e68a;
     font-weight: 700;
     font-size: 24px;
     display: flex;
     align-items: center;
     text-align: center;
-    color: #572e2ec0;
+    color: #ffffffc0;
     margin: 0px;
 }
 
@@ -52,22 +55,41 @@ opacity: 0.5;
 
 #text-schedule {
     margin: 0px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     display: flex;
     align-items: center;
     text-align: center;
-    color:  #572e2ec0;
+    color:  #ffffffc0;
 }
 
+.log-btn {
+    border: 0px;
+    background-color: transparent;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:  #ffffffc0;
+    cursor: pointer;
+    margin: 0px 20px;
+}
+
+.log-btn:hover {
+    color: #969696;
+}
 #text-viv:hover {
-    color: #572e2e;
+    color: #969696;
 }
 
 #text-schedule:hover {
-    color: #572e2e;
+    color: #969696;
 }
 
 #scheduleIcon:hover {
@@ -93,7 +115,7 @@ opacity: 0.5;
     }
 
 /* tablet version */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 768px) {
     #text-viv {
        display: none;
     }
@@ -110,4 +132,8 @@ opacity: 0.5;
         display: contents;
     }
 
+}
+
+.menu-con {
+    display: flex;
 }

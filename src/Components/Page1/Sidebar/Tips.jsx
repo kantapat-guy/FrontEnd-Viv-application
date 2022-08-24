@@ -5,27 +5,27 @@ import axios from 'axios';
 
 const Tips = () => {
 
-    const options = {
-        method: 'GET',
-        url: 'https://weatherapi-com.p.rapidapi.com/current.json',
-        params: {q: 'Bangkok'},
-        headers: {
-          'X-RapidAPI-Key': 'f0e17f9640msha8a1dba22d141cep100024jsn80effb1ee027',
-          'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-        }
-      };
-    axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
+    // const options = {
+    //     method: 'GET',
+    //     url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+    //     params: {q: 'Bangkok'},
+    //     headers: {
+    //       'X-RapidAPI-Key': 'f0e17f9640msha8a1dba22d141cep100024jsn80effb1ee027',
+    //       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+    //     }
+    //   };
+    // axios.request(options).then(function (response) {
+    //     console.log(response.data);
+    // }).catch(function (error) {
+    //     console.error(error);
+    // });
 
     return (
         <>
             <div className='Tip-container'>
                 <div className='tip-text-container'>
                     <img src={tiptop} /> 
-                    <h3>What's the Weather</h3>
+                    <h3>Tips of the day</h3>
                 </div>
                 <div className='tip-data-container'>
                     <div className='tip-img-container'>

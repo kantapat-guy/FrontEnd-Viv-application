@@ -51,14 +51,13 @@ const Weather = () => {
         fecthAPI()
     },[])
 
-    console.log(data)
 
     return (
         <>
             <div className='weather-container'>
-                {/* <div className='weather-head'>
-                    <h3>What's the Weather</h3>
-                </div> */}
+                <div className='weather-head'>
+                    <h3>Today is ....</h3>
+                </div>
                 <div className='weather-content'>
                     <div className='weather-result'>
                         <h4 className='env-data'>{data.weather}</h4>

@@ -38,7 +38,7 @@
 }
 
 h2 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
     display: flex;
@@ -52,7 +52,7 @@ h2 {
     width: 450px;
     height: 50px;
     font-size: 22px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
     border: none;
@@ -73,7 +73,7 @@ h2 {
     text-align: center;
     border: none;
 
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
     font-size: 20px;
@@ -82,7 +82,7 @@ h2 {
 
 .type option {
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
     font-size: 20px;
@@ -91,7 +91,7 @@ h2 {
 .boxDu {
     display: flex;
     flex-direction: row;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
     padding-top: 10px;
@@ -121,7 +121,7 @@ h2 {
 .cal h2 {
     display: flex;
     align-items: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -136,7 +136,7 @@ h2 {
     text-align: center;
     border: none;
     padding: 0 15px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:  #572e2ec0;
 }
 
@@ -176,7 +176,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 24px;
     background: #b9f2ffb6;
     border: 0;

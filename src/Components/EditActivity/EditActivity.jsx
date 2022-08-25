@@ -139,7 +139,7 @@ const EditAct = () => {
 
         <div className="btn">
           <button style={{border: "0px", cursor: "pointer"}}>
-              <input type="submit" value="Add" style={{cursor: "pointer"}}/>
+              <input type="submit" value="Save" style={{cursor: "pointer"}}/>
           </button>
           <Link to="/">
               <input type="submit" value="Cancel" style={{cursor: "pointer"}}/>

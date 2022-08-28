@@ -104,7 +104,7 @@ export default function PieChartMonth() {
         user: data._id.user,
         month: data._id.month,
         type: data._id.type,
-        hour: (data.total_hour),
+        hour: data.total_hour,
         minute: data.total_minute,
         total: data.total
       }))
@@ -120,7 +120,6 @@ export default function PieChartMonth() {
     fetchData();
   }, [])
 
-  console.table(summary)
 
   const data = summary.map((data) => (
     {
@@ -129,9 +128,12 @@ export default function PieChartMonth() {
     }
   ))
 
+  console.log(data)
+  console.log(summary)
+
   const cal = (value) => {
-    const h = Math.round(value/60)
-    const m = Math.round(value%60)
+    const h = Math.floor(value/60)
+    const m = Math.floor(value%60)
     return (`${h} hours ${m} minutes`)
   }
 

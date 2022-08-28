@@ -13,6 +13,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     
     return (
+        <div className="outer-nav">
         <div className="Navbar-container">
             <NavLink to="/">
             <div className="logo">
@@ -66,6 +67,7 @@ const Navbar = () => {
                 {/* link summary page */}
             </div>
             </NavLink>
+        </div>
         </div>
     );
 

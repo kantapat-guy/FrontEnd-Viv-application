@@ -33,9 +33,9 @@ const ActivityListCard = () => {
 
 
   //Fetch data from database to show at card
-  const fetchData = () => {
+  const fetchData = async () => {
     setLoading(true)
-    axios
+    await axios
     .get(`${import.meta.env.VITE_API_URL}/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       setActivity(res.data)
@@ -46,6 +46,7 @@ const ActivityListCard = () => {
     .finally(() => setLoading(false))
   }
 
+  //for loading animation
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -55,18 +56,6 @@ const ActivityListCard = () => {
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetchData()
-      setLoading(false)
-    }, 1000)
-
-  }, [])
-
-  
-  // const options = [
-  //   "Newest to oldest", "Oldest to newest"
-  // ]
 
   const options = [
     { value: 'New', label: 'Newest to oldest' },
@@ -106,10 +95,17 @@ const ActivityListCard = () => {
     }
     else {
       setLoading(true)
-      fetchData()
-      setLoading(false)
     }
   }
+
+
+  useEffect(() => { 
+    setTimeout(() => {
+      fetchData()
+      setLoading(false)
+    }, 800)
+  }, [])
+
 
   useEffect(() => {
     onSelect()
@@ -194,7 +190,6 @@ const ActivityListCard = () => {
   return (
     <div className="container">
         <div className="scroll">
-        {/* <Dropdown options={options} placeholder="Select an option" onChange={onSelect}/> */}
         <Select
         defaultValue={select}
         onChange={setSelect}

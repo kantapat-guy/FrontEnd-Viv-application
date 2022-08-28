@@ -31,8 +31,8 @@ export const renderActiveShape = (props) => {
   const textAnchor = cos >= 0 ? "start" : "end";
 
   const cal = (value) => {
-    const h = Math.round(value/60)
-    const m = Math.round(value%60)
+    const h = Math.floor(value/60)
+    const m = Math.floor(value%60)
     return (`${h} hours ${m} minutes`)
   }
 

@@ -15,10 +15,10 @@ const Tips = () => {
                 </div>
                 <div className='tip-data-container'>
                     <div className='tip-img-container'>
-                        <img src={tip} /> 
+                    <a href='https://www.healthline.com/nutrition/how-to-eat-healthy-guide' target="_blank"><img src={tip} /></a>
                     </div>
                     <div className='tip-result-container'>
-                        <h6>The Definitive Guide to Healthy Eating in Real Life</h6>
+                        <a href='https://www.healthline.com/nutrition/how-to-eat-healthy-guide' target="_blank"><h6>The Definitive Guide to Healthy Eating in Real Life</h6></a>
                         <p id='quote'>Depending on whom you ask, “healthy eating” may take any number of forms. It seems that everyone</p>
                     </div>
                 </div>

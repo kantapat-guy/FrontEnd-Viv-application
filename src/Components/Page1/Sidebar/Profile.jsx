@@ -8,6 +8,7 @@ import axios from 'axios';
 import { getToken } from '../../Login/services/auth';
 import "./Profile.css"
 import check from "./images/check.png"
+import user from "../../../assets/user.png"
 
 const Profile =() => {
   const [image, setImage] = useState(null);
@@ -38,13 +39,14 @@ const Profile =() => {
     .then ((res) => {
       setDBUrl(res.data.url)
     }).catch((err) => {
-        alert(err)
+      setDBUrl(user)
+      console.log(err)
     })
   }
 
 
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     const imageRef = ref(storage, "image");
     uploadBytes(imageRef, image)
       .then(() => {
@@ -74,7 +76,7 @@ const Profile =() => {
   return (
     <div className="con-profile">
       <div>
-        <Avatar src={dbUrl} sx={{ width: 150, height: 150 }} />
+        <Avatar src={!dbUrl ? user : dbUrl} sx={{ width: 150, height: 150 }} />
       <div className='up-container'>
         <IconButton color="primary" aria-label="upload picture" component="label">
             <input hidden accept="image/*" type="file"  onChange={handleImageChange} />

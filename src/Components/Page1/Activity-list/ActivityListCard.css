@@ -109,16 +109,12 @@
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: #eaeaea;
-    max-width: 600px;
 }
 
 
 .text-des {
     margin-top: 10px;
     margin-left: 25px;
-    display: block;
-    width: fit-content;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    max-width: 500px;
+    word-wrap: break-word;
 }

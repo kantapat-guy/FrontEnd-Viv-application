@@ -66,12 +66,17 @@
     color: #4f7096d4;
 }
 
+.tip-result-container h6:hover {
+    color: #7eb5f3d4;
+}
+
 .tip-result-container p {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     color: grey;
+    margin-top: 10px;
 }
 
 
